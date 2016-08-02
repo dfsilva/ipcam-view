@@ -70,7 +70,7 @@ public class MjpegViewDefault extends AbstractMjpegView {
                 }
                 tempx = (dispWidth / 2) - (bmw / 2);
                 tempy = (dispHeight / 2) - (bmh / 2);
-                return new Rect(tempx, tempy, bmw + tempx, bmh + tempy);
+                return new Rect(tempx-400, tempy-290, (bmw + tempx)+450, (bmh + tempy)+450);
             }
             if (displayMode == MjpegViewDefault.SIZE_FULLSCREEN)
                 return new Rect(0, 0, dispWidth, dispHeight);

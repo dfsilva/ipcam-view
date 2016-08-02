@@ -46,8 +46,8 @@ public class IpCamDefaultActivity extends AppCompatActivity {
 
     private void loadIpCam() {
         Mjpeg.newInstance()
-            .credential(getPreference(PREF_AUTH_USERNAME), getPreference(PREF_AUTH_PASSWORD))
-            .open(getPreference(PREF_IPCAM_URL), TIMEOUT)
+           // .credential(getPreference(PREF_AUTH_USERNAME), getPreference(PREF_AUTH_PASSWORD))
+            .open("http://diegosilva.sytes.net:8080/olho")
             .subscribe(
                 inputStream -> {
                     mjpegView.setSource(inputStream);
